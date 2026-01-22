@@ -17,11 +17,11 @@ enable_push: True  # Enable push mechanism for non-overlapping users
 # ============================================
 
 # Pull mechanism (for overlapping users)
-pull_weight: 0.1        # [TUNABLE] Pull loss weight, range: [0.01, 0.05, 0.1, 0.2]
-aug_strength: 0.1       # [TUNABLE] Augmentation strength, range: [0.05, 0.1, 0.15, 0.2]
+# pull_weight: 0.1        # [TUNABLE] Pull loss weight, range: [0.01, 0.05, 0.1, 0.2]
+# aug_strength: 0.1       # [TUNABLE] Augmentation strength, range: [0.05, 0.1, 0.15, 0.2]
 
 # Push mechanism (for non-overlapping users)
-candidate_pool_size: 8 # [TUNABLE] Candidate pool size (topk), range: [5, 10, 15, 20]
+# candidate_pool_size: 8 # [TUNABLE] Candidate pool size (topk), range: [5, 10, 15, 20]
 
 # --------------------------------------------
 # Fixed hyperparameters (DO NOT TUNE)
