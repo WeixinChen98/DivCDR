@@ -1,0 +1,29 @@
+# Python
+*.pyc
+__pycache__/
+*.egg-info/
+*.lprof
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Logs and outputs
+*.log
+nohup.out
+log_tensorboard/
+wandb/
+
+# Model checkpoints
+/saved/
+saved/
+*.pth
+
+# Temporary files
+general_yaml
+docs/build/
+
+# Results and analysis
+results/
+*.result

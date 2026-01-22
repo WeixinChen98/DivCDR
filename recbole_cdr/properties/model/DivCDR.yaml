@@ -1,0 +1,37 @@
+# Diverse_CMF Configuration
+
+# Base CMF parameters
+embedding_size: 64
+alpha: 0.1  # Loss weight between source and target domain
+lambda: 0.1  # Regularization for source domain
+gamma: 0.1  # Regularization for target domain
+learning_rate: 0.0005
+train_epochs: ["BOTH:300"]
+
+# Diversity mechanism switches
+enable_pull: True  # Enable pull mechanism for overlapping users
+enable_push: True  # Enable push mechanism for non-overlapping users
+
+# ============================================
+# Diverse Method Hyperparameters (3 tunable)
+# ============================================
+
+# Pull mechanism (for overlapping users)
+pull_weight: 0.1        # [TUNABLE] Pull loss weight, range: [0.01, 0.05, 0.1, 0.2]
+aug_strength: 0.1       # [TUNABLE] Augmentation strength, range: [0.05, 0.1, 0.15, 0.2]
+
+# Push mechanism (for non-overlapping users)
+candidate_pool_size: 8 # [TUNABLE] Candidate pool size (topk), range: [5, 10, 15, 20]
+
+# --------------------------------------------
+# Fixed hyperparameters (DO NOT TUNE)
+# --------------------------------------------
+info_loss_eta: 0.01     # [FIXED] Noise level for information loss estimation
+entropy_weight: 1.0     # [FIXED] Entropy term weight (balance with diversity term)
+div_weight: 1.0         # [FIXED] Diversity term weight (balance with entropy term)
+hardness_weight: 1.0    # [FIXED] Weight A for hardness (balance align + boundary)
+
+# DiverseSampler settings (should match above)
+use_diverse_sampler: True
+diverse_hardness_weight: 1.0
+diverse_candidate_pool_size: 8  # Should match candidate_pool_size above

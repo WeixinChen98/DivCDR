@@ -1,0 +1,49 @@
+field_separator: "\t"
+source_domain:
+  dataset: AmazonBooks
+  data_path: './recbole_cdr/dataset'
+  USER_ID_FIELD: user_id
+  ITEM_ID_FIELD: item_id
+  RATING_FIELD: rating
+  TIME_FIELD: timestamp
+  NEG_PREFIX: neg_
+  LABEL_FIELD: label
+  load_col:
+    inter: [user_id, item_id, rating]
+  user_inter_num_interval: "[1,inf)"
+  item_inter_num_interval: "[1,inf)"
+  val_interval:
+    rating: "[3,inf)"
+  drop_filter_field: True
+
+target_domain:
+  dataset: AmazonMov
+  data_path: './recbole_cdr/dataset'
+  USER_ID_FIELD: user_id
+  ITEM_ID_FIELD: item_id
+  RATING_FIELD: rating
+  TIME_FIELD: timestamp
+  NEG_PREFIX: neg_
+  LABEL_FIELD: label
+  load_col:
+    inter: [user_id, item_id, rating]
+  user_inter_num_interval: "[1,inf)"
+  item_inter_num_interval: "[1,inf)"
+  val_interval:
+    rating: "[3,inf)"
+  drop_filter_field: True
+
+# Training settings
+train_epochs: ["BOTH:300"]  # Default quick test, can override with --train_epochs
+train_batch_size: 4096
+eval_batch_size: 409600000
+
+# Evaluation metrics
+metrics: ["NDCG", "Hit", "ShannonEntropy", "GiniIndex"]
+topk: [5, 10]
+valid_metric: NDCG@10
+
+
+aug_strength: 0.05
+candidate_pool_size: 4
+pull_weight: 0.05
