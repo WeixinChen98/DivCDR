@@ -1,6 +1,6 @@
 # [WSDM 2027] Beyond Knowledge Transfer: How User Overlap Shapes Diversity in Cross-Domain Recommendation
 
-The current code implements **DivCDR v1** from our original SIGIR submission. We revised the method in response to reviewer feedback and will release the implementation of the [WSDM 2027 version](https://doi.org/10.1145/3862322.3863878) once it is ready.
+The current code implements **DivCDR v1** from our original SIGIR submission. We revised the method in response to reviewer feedback and will release the implementation of the WSDM 2027 version once it is ready.
 
 ## Requirements
 
@@ -91,9 +91,8 @@ If you find this repository helpful in your research, please consider citing our
 @inproceedings{zhao2027divcdr,
   author    = {Zhao, Yuhan and Chen, Weixin and Chen, Shu and Chen, Li},
   title     = {Beyond Knowledge Transfer: How User Overlap Shapes Diversity in Cross-Domain Recommendation},
-  booktitle = {Proceedings of the Twentieth ACM International Conference on Web Search and Data Mining},
+  booktitle = {Findings of the Twentieth ACM International Conference on Web Search and Data Mining},
   series    = {WSDM '27},
-  year      = {2027},
-  doi       = {10.1145/3862322.3863878}
+  year      = {2027}
 }
 ```
