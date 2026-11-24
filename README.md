@@ -1,6 +1,6 @@
-# DivCDR
+# [WSDM 2027] Beyond Knowledge Transfer: How User Overlap Shapes Diversity in Cross-Domain Recommendation
 
-**DivCDR** is the official implementation for paper "Breaking the Cocoon: A Model-Agnostic Push-Pull Strategy for Non-Overlapping Users in Cross-Domain Recommendation".
+The current code implements **DivCDR v1** from our original SIGIR submission. We revised the method in response to reviewer feedback and will release the implementation of the [WSDM 2027 version](https://doi.org/10.1145/3862322.3863878) once it is ready.
 
 ## Requirements
 
@@ -82,3 +82,18 @@ To customize experiments, modify the configuration file or provide additional pa
 ## Acknowledgement
 
 The implementation is based on the open-source recommendation library [RecBole-CDR](https://github.com/RUCAIBox/RecBole-CDR).
+
+## Citation
+
+If you find this repository helpful in your research, please consider citing our paper.
+
+```bibtex
+@inproceedings{zhao2027divcdr,
+  author    = {Zhao, Yuhan and Chen, Weixin and Chen, Shu and Chen, Li},
+  title     = {Beyond Knowledge Transfer: How User Overlap Shapes Diversity in Cross-Domain Recommendation},
+  booktitle = {Proceedings of the Twentieth ACM International Conference on Web Search and Data Mining},
+  series    = {WSDM '27},
+  year      = {2027},
+  doi       = {10.1145/3862322.3863878}
+}
+```
